@@ -30,6 +30,16 @@
         </activity>
         <service android:name=".service.AppServices"/>
         <service android:name=".service.AppServices$GrayInnerService"/>
+        <receiver android:name=".reciver.UsbReciver">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            <action android:name="android.intent.action.MEDIA_REMOVED"/>
+            <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+            <action android:name="android.intent.action.MEDIA_REMOVED"/>
+            <action android:name="android.intent.action.MEDIA_REMOVED"/>
+            <data android:scheme="file"></data> </intent-filter> </receiver>
+
+
     </application>
 
 </manifest>

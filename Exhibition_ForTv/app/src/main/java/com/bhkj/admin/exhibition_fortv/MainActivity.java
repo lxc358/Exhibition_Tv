@@ -3,11 +3,13 @@ package com.bhkj.admin.exhibition_fortv;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.VideoView;
 
 import com.bhkj.admin.exhibition_fortv.activity.VideoActivity;
+import com.bhkj.admin.exhibition_fortv.utils.IpUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,5 +27,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        String ipAddress = IpUtils.getIPAddress(this);
+        String hostIP = IpUtils.getHostIP();
+        Log.d("MainActivity", ipAddress+":::"+hostIP);
     }
 }
