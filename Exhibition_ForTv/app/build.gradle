@@ -29,4 +29,5 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'cn.jzvd:jiaozivideoplayer:6.3.1'
     testCompile 'junit:junit:4.12'
+    compile files('libs/itsrts-pptviewer.jar')
 }

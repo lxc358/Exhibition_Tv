@@ -28,6 +28,14 @@
             android:theme="@style/AppTheme"
             >
         </activity>
+
+        <activity android:name=".activity.DocActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme">
+
+
+        </activity>
+
         <service android:name=".service.AppServices"/>
         <service android:name=".service.AppServices$GrayInnerService"/>
         <receiver android:name=".reciver.UsbReciver">
