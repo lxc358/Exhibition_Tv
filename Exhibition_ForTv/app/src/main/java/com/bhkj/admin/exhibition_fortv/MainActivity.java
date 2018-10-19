@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import com.bhkj.admin.exhibition_fortv.activity.DocActivity;
 import com.bhkj.admin.exhibition_fortv.activity.VideoActivity;
 import com.bhkj.admin.exhibition_fortv.utils.IpUtils;
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         tv_videotest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this, VideoActivity.class);
+                Intent intent=new Intent(MainActivity.this, DocActivity.class);
                 startActivity(intent);
             }
         });
