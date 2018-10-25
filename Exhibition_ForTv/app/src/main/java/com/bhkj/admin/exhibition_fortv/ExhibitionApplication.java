@@ -21,10 +21,19 @@ public class ExhibitionApplication extends Application {
         super.onCreate();
         activities=new ArrayList<>();
 
-        Intent intent=new Intent(this, AppServices.class);
-        startService(intent);
+
     }
+//    public static void registerApp(){
+//
+//    }
     public static void addLocalActivity(Activity activity){
         activities.add(activity);
+    }
+    public static void clearCurrentActivity(){
+        if(!activities.isEmpty()){
+            for (int i = 0; i < activities.size(); i++) {
+                activities.get(i).finish();
+            }
+        }
     }
 }

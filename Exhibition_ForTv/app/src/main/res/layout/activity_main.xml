@@ -11,10 +11,29 @@
     tools:context="com.bhkj.admin.exhibition_fortv.MainActivity">
 
     <TextView
+
+        android:textSize="25dp"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
         android:id="@+id/tv_videotest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="视频测试" />
+        android:text="请输入激活码" />
 
-
+    <EditText
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_activation_bg"
+        android:id="@+id/et_registernum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_videotest"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:id="@+id/bt_activation"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/et_registernum"
+        android:layout_centerHorizontal="true"
+        android:text="激活"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

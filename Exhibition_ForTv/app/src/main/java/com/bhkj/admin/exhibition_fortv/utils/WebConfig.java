@@ -5,7 +5,9 @@ package com.bhkj.admin.exhibition_fortv.utils;
  */
 
 public class WebConfig {
+
     private int port;//端口
+
     private int maxParallels;//最大监听数
 
     public int getPort() {

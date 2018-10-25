@@ -5,5 +5,6 @@ package com.bhkj.admin.exhibition_fortv.utils;
  */
 
 public class AppConfig {
-    public static final String VIDEO_PATH="video_path";
+    public static final String UCard_PATH ="ucard_path";
+    public static final String Activation_CODE ="334D50393460B262";
 }

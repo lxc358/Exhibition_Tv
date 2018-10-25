@@ -1,15 +1,11 @@
 package com.bhkj.admin.exhibition_fortv.activity;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.WindowManager;
-import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -25,14 +21,8 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.List;
 
-import cn.jzvd.Jzvd;
 import cn.jzvd.JzvdStd;
 
 /**
@@ -64,9 +54,9 @@ public class VideoActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        String videopath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/testvideo";
-//        String videopath = (String) SPUtils.get(this, AppConfig.VIDEO_PATH, "");
-//        videopath=videopath+"/demo";
+//        String videopath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/VIDEO";
+        String videopath = (String) SPUtils.get(this, AppConfig.UCard_PATH, "");
+        videopath=videopath+"/VIDEO";
         Log.d("VideoActivity", "videopath"+videopath);
         try {
             files = getFiles(videopath);
@@ -75,7 +65,7 @@ public class VideoActivity extends AppCompatActivity {
             if(files.isEmpty()){
                 Toast.makeText(this, "当前无文件可以播放", Toast.LENGTH_SHORT).show();
                 finish();
-                return;
+
             }
             videoView.setVideoURI(Uri.parse(absolutePath));
 
@@ -121,11 +111,11 @@ public class VideoActivity extends AppCompatActivity {
         Log.d("AppServices", messageEvent.getData());
 
         switch (messageEvent.getData()){
-            case Instructions.NEXT_VIDEO:
+            case Instructions.NEXT:
                 videoView.stopPlayback();
                 nextStart();
                 break;
-            case Instructions.PRE_VIDEO:
+            case Instructions.PRE:
                 videoView.stopPlayback();
                 perVideo();
                 break;
